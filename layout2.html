@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Grid Layout 2</title>
+
+    <style>
+
+        main{
+            width: 960px;
+            min-height: 1000px;
+            background-color: #ededed ;
+            margin: 30px auto;
+
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            grid-template-rows: 70px 200px 600px 1fr;
+            grid-gap: 25px;
+            font-family: sans-serif;
+        }
+
+        .logo, .items, .boxes div, footer {
+            background-color: silver;
+        }
+
+    
+
+        header{
+            grid-row: 1 / 2;
+            grid-column: 1 / 4;
+            display: grid;
+            grid-template-columns: repeat (8, 1fr);
+        }
+
+        .logo {
+            grid-column: 1 / 2;
+        }
+
+        .items {
+            grid-column: 5 / 9;
+            display:grid;
+            grid-template-columns: repeat(4, 1fr);
+            height: 40px;
+            align-self: center;
+        }
+
+        .items div {
+            align-self: center;
+            justify-self: center;
+        }
+
+        .text{
+            grid-row: 2 / 3;
+            grid-column: 1 / 4;
+        }
+
+        .text h1 {
+            font-size: 2.6em;
+            margin: 10px 10px 0px 0px;
+        }
+
+        .text h4 {
+            font-size: 1.5em;
+        }
+
+        .boxes{
+            grid-row: 3 / 4;
+            grid-column: 1 / 4;
+            display: grid;
+            grid-template-rows: repeat(3 , 1fr);
+            grid-template-columns: repeat(3, 1fr);
+            grid-gap: 10px;
+        }
+
+        footer {
+            grid-column: 1 / 4;
+            grid-row: 4 / 5;
+            display: grid;
+            align-content: center;
+            justify-content: center;
+        }
+
+    </style>
+</head>
+
+<body>
+    
+    <main>
+        <header>
+            <div class="logo">Company Logo</div>
+            <div class="items">
+                <div>Item 1</div>
+                <div>Item 2</div>
+                <div>Item 3</div>
+                <div>Item 4</div>
+            </div>
+        </header>
+    
+        <section class="text">
+            <h1>Lorem ipsum dolor sit amet, ne saepe phaedrum cotidieque has, natum zril pro ei.</h1>
+            <h4>Cu vel aliquid lobortis deseruisse. Nam at adipisci dignissim forensibus. Qui an recteque maluisset assentior, cu ferri aperiam imperdiet sed.</h4>
+        </section>
+            
+        <section class="boxes">
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+        </section>
+    
+        <footer>
+            Copyright Notice
+        </footer>
+    </main>
+    
+</body>
+</html>
